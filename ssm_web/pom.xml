@@ -7,6 +7,13 @@
   <groupId>xyz.macsen</groupId>
   <artifactId>ssm_web</artifactId>
   <version>1.0-SNAPSHOT</version>
+  <dependencies>
+    <dependency>
+      <groupId>xyz.macsen</groupId>
+      <artifactId>ssm_service</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
   <packaging>war</packaging>
 
   <properties>
