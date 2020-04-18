@@ -1,7 +1,7 @@
 package xyz.macsen.ssm.domain;
 
 import org.springframework.format.annotation.DateTimeFormat;
-import xyz.macsen.ssm.utils.DataUtils;
+import xyz.macsen.ssm.utils.DateUtils;
 
 import java.util.Date;
 
@@ -64,7 +64,7 @@ public class Product {
 
     public String getDepartureTimeStr() {
         if (departureTime != null) {
-            departureTimeStr = DataUtils.date2String(departureTime, "yyyy-MM-dd HH:mm:ss");
+            departureTimeStr = DateUtils.date2String(departureTime, "yyyy-MM-dd HH:mm:ss");
         }
         return departureTimeStr;
     }
