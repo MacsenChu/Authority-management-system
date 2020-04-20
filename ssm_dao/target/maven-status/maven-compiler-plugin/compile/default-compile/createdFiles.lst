@@ -1,4 +1,7 @@
-xyz/macsen/ssm/dao/ProductDao.class
+xyz/macsen/ssm/dao/UserDao.class
+xyz/macsen/ssm/dao/RoleDao.class
 xyz/macsen/ssm/dao/MemberDao.class
-xyz/macsen/ssm/dao/TravellerDao.class
 xyz/macsen/ssm/dao/OrdersDao.class
+xyz/macsen/ssm/dao/PermissionDao.class
+xyz/macsen/ssm/dao/ProductDao.class
+xyz/macsen/ssm/dao/TravellerDao.class
