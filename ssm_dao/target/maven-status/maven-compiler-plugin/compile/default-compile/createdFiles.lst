@@ -1,4 +1,5 @@
 xyz/macsen/ssm/dao/UserDao.class
+xyz/macsen/ssm/dao/SysLogDao.class
 xyz/macsen/ssm/dao/RoleDao.class
 xyz/macsen/ssm/dao/MemberDao.class
 xyz/macsen/ssm/dao/OrdersDao.class

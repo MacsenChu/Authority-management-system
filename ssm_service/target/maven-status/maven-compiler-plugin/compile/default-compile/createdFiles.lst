@@ -7,4 +7,6 @@ xyz/macsen/ssm/service/RoleService.class
 xyz/macsen/ssm/service/OrderService.class
 xyz/macsen/ssm/service/PermissionService.class
 xyz/macsen/ssm/service/impl/RoleServiceImpl.class
+xyz/macsen/ssm/service/SysLogService.class
+xyz/macsen/ssm/service/impl/SysLogServiceImpl.class
 xyz/macsen/ssm/service/impl/OrdersServiceImpl.class

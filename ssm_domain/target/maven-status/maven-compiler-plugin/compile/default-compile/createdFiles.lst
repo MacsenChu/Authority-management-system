@@ -3,5 +3,6 @@ xyz/macsen/ssm/domain/Traveller.class
 xyz/macsen/ssm/domain/Product.class
 xyz/macsen/ssm/domain/Permission.class
 xyz/macsen/ssm/domain/UserInfo.class
+xyz/macsen/ssm/domain/SysLog.class
 xyz/macsen/ssm/domain/Role.class
 xyz/macsen/ssm/domain/Member.class

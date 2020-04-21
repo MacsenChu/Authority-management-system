@@ -1,5 +1,7 @@
 xyz/macsen/ssm/controller/ProductController.class
+xyz/macsen/ssm/controller/SysLogController.class
 xyz/macsen/ssm/controller/PermissionController.class
+xyz/macsen/ssm/controller/LogAop.class
 xyz/macsen/ssm/controller/UserController.class
 xyz/macsen/ssm/controller/OrderController.class
 xyz/macsen/ssm/controller/RoleController.class

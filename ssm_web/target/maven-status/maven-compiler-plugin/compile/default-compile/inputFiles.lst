@@ -1,5 +1,7 @@
 /Users/mingze/Develop/IdeaProjects/ssm/ssm_demo/ssm_web/src/main/java/xyz/macsen/ssm/controller/UserController.java
 /Users/mingze/Develop/IdeaProjects/ssm/ssm_demo/ssm_web/src/main/java/xyz/macsen/ssm/controller/ProductController.java
+/Users/mingze/Develop/IdeaProjects/ssm/ssm_demo/ssm_web/src/main/java/xyz/macsen/ssm/controller/SysLogController.java
 /Users/mingze/Develop/IdeaProjects/ssm/ssm_demo/ssm_web/src/main/java/xyz/macsen/ssm/controller/OrderController.java
+/Users/mingze/Develop/IdeaProjects/ssm/ssm_demo/ssm_web/src/main/java/xyz/macsen/ssm/controller/LogAop.java
 /Users/mingze/Develop/IdeaProjects/ssm/ssm_demo/ssm_web/src/main/java/xyz/macsen/ssm/controller/RoleController.java
 /Users/mingze/Develop/IdeaProjects/ssm/ssm_demo/ssm_web/src/main/java/xyz/macsen/ssm/controller/PermissionController.java
