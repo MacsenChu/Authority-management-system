@@ -1,6 +1,7 @@
 package xyz.macsen.ssm.dao;
 
 import org.apache.ibatis.annotations.*;
+import xyz.macsen.ssm.domain.Role;
 import xyz.macsen.ssm.domain.UserInfo;
 
 import java.util.List;
@@ -36,4 +37,10 @@ public interface UserDao {
             @Result(property = "roles", column = "id", javaType = List.class, many = @Many(select = "xyz.macsen.ssm.dao.RoleDao.findRoleByUserId"))
     })
     UserInfo findById(String id) throws Exception;
+
+    @Select("select * from role where id not in (select roleId from users_role where userId = #{userId})")
+    List<Role> findOtherRoles(String userId);
+
+    @Insert("insert into users_role(userId, roleId) values(#{userId}, #{roleId})")
+    void addRoleToUser(@Param("userId") String userId, @Param("roleId") String roleId);
 }

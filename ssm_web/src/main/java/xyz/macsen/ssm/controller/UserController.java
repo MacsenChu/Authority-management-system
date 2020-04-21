@@ -1,10 +1,12 @@
 package xyz.macsen.ssm.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.User;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import xyz.macsen.ssm.domain.Role;
 import xyz.macsen.ssm.domain.UserInfo;
 import xyz.macsen.ssm.service.UserService;
 
@@ -19,6 +21,7 @@ public class UserController {
     private UserService userService;
 
     @RequestMapping("/findAll.do")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ModelAndView findAll() throws Exception {
 
         ModelAndView mv = new ModelAndView();
@@ -32,6 +35,7 @@ public class UserController {
 
     // 用户添加
     @RequestMapping("/save.do")
+    @PreAuthorize("authentication.principal.username == 'Macsen'")
     public String save(UserInfo userInfo) throws Exception {
 
         userService.save(userInfo);
@@ -48,6 +52,30 @@ public class UserController {
         mv.setViewName("user-show");
 
         return mv;
+    }
+
+    @RequestMapping("/findUserByIdAndAllRole.do")
+    public ModelAndView findUserByIdAndAllRole(@RequestParam(name="id", required = true) String userId) throws Exception {
+
+        ModelAndView mv = new ModelAndView();
+        // 1. 根据用户id查询用户
+        UserInfo userInfo = userService.findById(userId);
+        // 2. 根据用户id查询可以添加的角色
+        List<Role> otherRoles = userService.findOtherRoles(userId);
+        mv.addObject("user", userInfo);
+        mv.addObject("roleList", otherRoles);
+        mv.setViewName("user-role-add");
+
+        return mv;
+    }
+
+
+    // 给用户添加角色
+    @RequestMapping("/addRoleToUser.do")
+    public String addRoleToUser(@RequestParam(name = "userId", required = true) String userId,@RequestParam(name = "ids", required = true) String[] roleIds) throws Exception {
+        userService.addRoleToUser(userId, roleIds);
+
+        return "redirect:findAll.do";
     }
 
 }

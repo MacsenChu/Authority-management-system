@@ -7,6 +7,7 @@ import org.springframework.web.servlet.ModelAndView;
 import xyz.macsen.ssm.domain.Product;
 import xyz.macsen.ssm.service.ProductService;
 
+import javax.annotation.security.RolesAllowed;
 import java.util.List;
 
 @Controller
@@ -18,6 +19,7 @@ public class ProductController {
 
     // 查询全部商品
     @RequestMapping("/findAll.do")
+    @RolesAllowed("ADMIN")
     public ModelAndView findAll() throws Exception {
 
         ModelAndView mv = new ModelAndView();
