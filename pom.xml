@@ -26,7 +26,7 @@
         <log4j.version>1.2.17</log4j.version>
         <mysql.version>8.0.19</mysql.version>
         <mybatis.version>3.5.4</mybatis.version>
-        <spring.security.version>5.3.1.RELEASE</spring.security.version>
+        <spring.security.version>5.5.7</spring.security.version>
     </properties>
 
     <dependencies>
