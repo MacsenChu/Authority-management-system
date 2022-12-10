@@ -21,7 +21,7 @@
         <java.version>12</java.version>
         <maven.compiler.source>12</maven.compiler.source>
         <maven.compiler.target>12</maven.compiler.target>
-        <spring.version>5.2.5.RELEASE</spring.version>
+        <spring.version>6.0.0</spring.version>
         <slf4j.version>2.0.0-alpha1</slf4j.version>
         <log4j.version>1.2.17</log4j.version>
         <mysql.version>8.0.19</mysql.version>
